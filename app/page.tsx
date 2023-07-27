@@ -97,6 +97,7 @@ export default function Home() {
                     {...field}
                   />
                 </FormControl>
+                <FormMessage />
                 <FormDescription>Inform the message.</FormDescription>
                 <Button
                   type="submit"
@@ -111,13 +112,13 @@ export default function Home() {
           />
         </form>
       </Form>
-      <div className="flex flex-col-reverse mt-4 space-y-2">
+      <div className="flex flex-col mt-4 space-y-2">
         <div className="flex items-center justify-center">
           {isLoading && (
             <BrainCircuit className="container h-36 w-36 animate-pulse" />
           )}
         </div>
-        <div className="container">
+        <div className="container flex flex-col-reverse space-y-2">
           {messages.map(menssage => (
             <Card>
               <CardHeader>
